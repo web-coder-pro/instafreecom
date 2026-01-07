@@ -1,0 +1,147 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+	             Roboto, Helvetica, Arial, sans-serif;
+	background: linear-gradient(135deg,
+		#405de6,
+		#5851db,
+		#833ab4,
+		#c13584,
+		#e1306c,
+		#fd1d1d
+	);
+}
+
+/* CENTER */
+.center-div-inline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 10px;
+}
+
+/* CARD */
+.inline-div {
+	background: #fff;
+	width: 100%;
+	max-width: 420px;
+	border-radius: 18px;
+	box-shadow: 0 25px 80px rgba(0,0,0,.35);
+	overflow: hidden;
+	animation: fadeUp .7s ease;
+	text-align: center;
+}
+
+/* HEADER */
+.h1-diving {
+	margin: 0;
+	padding: 22px 16px;
+	font-size: 22px;
+	line-height: 1.4;
+	color: #fff;
+	background: linear-gradient(135deg,#fd1d1d,#c13584);
+}
+
+/* LOGO */
+.btn-free {
+	background: none;
+	border: none;
+	font-size: 30px;
+	color: #c13584;
+	cursor: default;
+}
+
+/* FORM */
+form {
+	padding: 20px;
+}
+
+label {
+	display: block;
+	text-align: left;
+	font-size: 14px;
+	font-weight: 600;
+	margin: 10px 0 6px;
+	color: #333;
+}
+
+input, select {
+	width: 100%;
+	height: 42px;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+	padding: 0 12px;
+	font-size: 14px;
+	transition: .25s;
+}
+
+input:focus,
+select:focus {
+	outline: none;
+	border-color: #c13584;
+	box-shadow: 0 0 0 2px rgba(193,53,132,.2);
+}
+
+/* MAIN BUTTON */
+.btn-kirish {
+	margin-top: 15px;
+	width: 100%;
+	height: 46px;
+	border-radius: 12px;
+	border: none;
+	font-size: 16px;
+	font-weight: 600;
+	color: #fff;
+	background: linear-gradient(135deg,#405de6,#833ab4);
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn-kirish:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+/* TEXT */
+p {
+	font-size: 13px;
+	color: #555;
+}
+
+a {
+	font-size: 13px;
+	color: #405de6;
+	text-decoration: none;
+}
+
+/* HR */
+hr {
+	border: none;
+	height: 1px;
+	background: #eee;
+	margin: 20px 0;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+	.h1-diving {
+		font-size: 18px;
+	}
+}

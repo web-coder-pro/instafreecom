@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+	<meta charset="utf-8">
+	<title>letsFree - password</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		body {
+			background-color: lightyellow;
+			margin-bottom: 200px;
+		}
+		.center-input-label {
+			text-align: center;
+		}
+		label {
+			font-size: 22px;
+		}
+		input {
+			width: 300px;
+		 	height: 35px;
+		 	border: 2px solid red;
+		 	border-radius: 15px;
+		 	font-size: 16px;
+		}
+
+		input:hover {
+			transform: scale(1.03);
+		}
+
+		.btn-tasdiqlash {
+			background-color: green;
+			color: white;
+			width: 210px;
+			height: 35px;
+			border-radius: 10px;
+			border: none;
+			text-align: center;
+			cursor: pointer;
+			font-size: 17px;
+		}
+
+		.btn-tasdiqlash:hover {
+			transform: scale(1.05);
+		}
+		#result {
+			margin-top: 20px;
+			text-align: center;
+			font-size: 18px;
+		}
+
+		.mrgin-box {
+			display: inline-block;
+		}
+
+		@media(max-width: 480px) {
+			h4 {
+				font-size: 18px;
+			}
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="center-input-label">
+
+		<div class="mrgin-box">
+
+			<h1 style="font-size: 60px; cursor: default;">⛔ <br> <span style="font-size: 40px; color: red;">DIQQAT!!!</span></h1>
+			<h4 style="color: red;">Bu Saytga login va parolni bilmasdan kirish qat'iyan taqiqlanadi!!!<br> Xoziroq <a href="https://www.google.com" target="_blank">Chiqish</a> ni bosing!</h4>
+
+			<hr>
+
+			<label for="login">Loginni kiriting:</label><br>
+			<input id="login-input" type="text" name="login-i" placeholder="Login"><br><br>
+
+			<label for="parol">Parolni kiriting:</label><br>
+			<input id="parol-input" type="password" name="login-i" placeholder="Parol"><br><br>
+
+			<button class="btn-tasdiqlash" onclick="checkLogin()">Tizimga kirish 📲</button>
+
+		</div>
+		
+	</div>
+
+	<div id="result"></div>
+
+	<script>
+		function checkLogin() {
+			// To'g'ri login va parol
+			const correctLogin = "letsFree.com.github.pro12345Qm.M.uz.R";
+			const correctPassword = "* * * * *";
+
+			// Foydalanuvchi kiritgan login va parol
+			const loginInput = document.getElementById("login-input").value;
+			const passwordInput = document.getElementById("parol-input").value;
+
+			// Natijani ko'rsatish
+			const resultDiv = document.getElementById("result");
+
+			if (loginInput === correctLogin && passwordInput === correctPassword) {
+				// Agar login va parol to'g'ri bo'lsa, yangi sahifaga yo'naltiramiz
+				window.location.href = "indexfree.html";  // work-one.html sahifasiga yo'naltirish
+			} else {
+				resultDiv.innerHTML = "Xato login yoki parol. Iltimos, qaytadan urining!";
+				resultDiv.style.color = "red";
+
+				// Login va parolni o'chirish
+				document.getElementById("login-input").value = "";
+				document.getElementById("parol-input").value = "";
+			}
+		}
+	</script>
+</body>
+</html>
